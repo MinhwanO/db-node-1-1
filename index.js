@@ -10,6 +10,8 @@ const server = app.listen(port, () => {
     console.log(`${port} running`)
 });
 
+const MONGOURL = process.env.MONGODB_URL
+
 app.use(cors())
 
 app.use(express.json())
@@ -18,7 +20,7 @@ app.use(express.urlencoded({extended: true}))
 
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(MONGOURL)
     .then(() => console.log('MongoDB Connected...'))
     .catch(() => console.log(err))
 
