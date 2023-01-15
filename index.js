@@ -10,7 +10,7 @@ const server = app.listen(port, () => {
     console.log(`${port} running`)
 });
 
-const MONGOURL = "mongodb+srv://minhwan:12345@cluster0.nrsed4p.mongodb.net/?retryWrites=true&w=majority"//process.env.MONGODB_URL
+const MONGOURL = process.env.MONGODB_URL
 
 app.use(cors())
 
