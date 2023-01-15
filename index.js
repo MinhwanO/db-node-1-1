@@ -5,7 +5,7 @@ const cors = require('cors')
 
 require('dotenv').config()
 
-const port = 8080//process.env.PORT
+const port = process.env.PORT
 const server = app.listen(port, () => {
     console.log(`${port} running`)
 });
